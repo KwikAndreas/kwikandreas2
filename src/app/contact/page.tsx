@@ -20,7 +20,6 @@ export default function ContactPage() {
 
         <Card>
           <CardContent className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Info Kontak Langsung */}
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <Mail className="h-8 w-8 text-orange-500 mt-1" />
@@ -39,7 +38,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Sosial Media */}
             <div className="space-y-4">
               {socialLinks.map(social => {
                 const Icon = social.icon;
