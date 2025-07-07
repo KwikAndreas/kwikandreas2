@@ -46,7 +46,6 @@ export default function ProjectsPage() {
       <h1 className="text-4xl font-bold mb-2">Proyek Saya</h1>
       <p className="text-slate-600 dark:text-slate-400 mb-8">Berikut adalah beberapa pekerjaan yang telah saya buat.</p>
 
-      {/* Filter Buttons */}
       <div className="flex gap-2 mb-8">
         {categories.map(cat => (
            <Button
@@ -60,7 +59,6 @@ export default function ProjectsPage() {
         ))}
       </div>
 
-      {/* Project Grid */}
       <motion.div
         layout
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"

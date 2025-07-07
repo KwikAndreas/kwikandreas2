@@ -39,13 +39,25 @@ const educations = [
 
 const certifications = [
   {
+    name: "Juara 3 AI Power Game Design Competition",
+    issuer: "Universitas Bunda Mulia",
+    year: "2025",
+  },
+  {
+    name: "Algorithms & Data Structures with Python (Gold)",
+    issuer: " Samsung Inovation Campus",
+    year: "2024",
+  },
+  {
+    name: "Advanced Python (Gold)",
+    issuer: " Samsung Inovation Campus",
+    year: "2024",
+  },
+  {
     name: "KKNI Level 2 pada Kompetensi keahlian Multimedia",
     issuer: "Badan Nasional Sertifikasi Kompetensi (BNSP)",
     year: "2023",
   },
-  { name: "Advanced Python (Gold)", issuer: " Samsung Inovation Campus", year: "2024" },
-  { name: "Algorithms & Data Structures with Python (Gold)", issuer: " Samsung Inovation Campus", year: "2024" },
-  { name: "Algorithms & Data Structures with Python (Gold)", issuer: " Samsung Inovation Campus", year: "2024" },
 ];
 
 const skills = [
@@ -71,7 +83,6 @@ export default function AboutPage() {
       <h1 className="text-4xl font-bold mb-8 text-center">Tentang Saya</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Kolom Kiri: Info Dasar */}
         <div className="lg:col-span-1 space-y-6">
           <Card>
             <CardHeader>
@@ -107,7 +118,6 @@ export default function AboutPage() {
         </div>
 
         <div className="lg:col-span-2 space-y-8">
-          {/* Pengalaman */}
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -135,7 +145,6 @@ export default function AboutPage() {
             </CardContent>
           </Card>
 
-          {/* Edukasi & Sertifikasi */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card>
               <CardHeader>

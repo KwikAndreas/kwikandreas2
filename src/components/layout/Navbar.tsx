@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils"; // Fungsi utilitas dari Shadcn
+import { cn } from "@/lib/utils";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { Menu, X } from "lucide-react";
 
@@ -19,7 +19,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileOpen(false);
   }, []);
@@ -37,7 +36,6 @@ export function Navbar() {
         <Link href="/" className="text-xl font-bold text-orange-500">
           KwikAndreas.
         </Link>
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-4">
           <Link href="/" className="hover:text-orange-500 transition-colors">
             Beranda
@@ -62,7 +60,6 @@ export function Navbar() {
           </Link>
           <ThemeToggle />
         </div>
-        {/* Mobile Hamburger */}
         <button
           className="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-orange-500"
           aria-label="Open menu"
@@ -75,7 +72,6 @@ export function Navbar() {
           )}
         </button>
       </nav>
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="md:hidden bg-slate-50/95 dark:bg-zinc-900/95 border-b border-slate-200 dark:border-zinc-800 px-4 py-4">
           <div className="flex flex-col gap-4">
