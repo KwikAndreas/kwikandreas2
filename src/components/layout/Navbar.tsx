@@ -44,19 +44,19 @@ export function Navbar() {
             href="/project"
             className="hover:text-orange-500 transition-colors"
           >
-            Proyek
+            Project
           </Link>
           <Link
             href="/about"
             className="hover:text-orange-500 transition-colors"
           >
-            Tentang Saya
+            About
           </Link>
           <Link
             href="/contact"
             className="hover:text-orange-500 transition-colors"
           >
-            Kontak
+            Contact
           </Link>
           <ThemeToggle />
         </div>
@@ -80,21 +80,21 @@ export function Navbar() {
               className="hover:text-orange-500 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
-              Proyek
+              Project
             </Link>
             <Link
               href="/tentang-saya"
               className="hover:text-orange-500 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
-              Tentang Saya
+              About
             </Link>
             <Link
               href="/kontak"
               className="hover:text-orange-500 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
-              Kontak
+              Contact
             </Link>
             <ThemeToggle />
           </div>
