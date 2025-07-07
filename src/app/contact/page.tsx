@@ -1,4 +1,3 @@
-// app/(pages)/kontak/page.tsx
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, Linkedin, Github, Instagram, Gamepad2 } from 'lucide-react';

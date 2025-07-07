@@ -76,21 +76,21 @@ export function Navbar() {
         <div className="md:hidden bg-slate-50/95 dark:bg-zinc-900/95 border-b border-slate-200 dark:border-zinc-800 px-4 py-4">
           <div className="flex flex-col gap-4">
             <Link
-              href="/proyek"
+              href="/project"
               className="hover:text-orange-500 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               Project
             </Link>
             <Link
-              href="/tentang-saya"
+              href="/about"
               className="hover:text-orange-500 transition-colors"
               onClick={() => setMobileOpen(false)}
             >
               About
             </Link>
             <Link
-              href="/kontak"
+              href="/contact"
               className="hover:text-orange-500 transition-colors"
               onClick={() => setMobileOpen(false)}
             >

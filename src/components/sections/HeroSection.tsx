@@ -26,7 +26,7 @@ export function HeroSection() {
           digital.
         </p>
         <div className="mt-8 flex justify-center gap-4">
-          <Link href="/proyek">
+          <Link href="/project">
             <Button
               size="lg"
               className="bg-orange-500 hover:bg-orange-600 text-white"
@@ -34,7 +34,7 @@ export function HeroSection() {
               Lihat Proyek Saya <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
-          <Link href="/kontak">
+          <Link href="/contact">
             <Button size="lg" variant="outline">
               Hubungi Saya
             </Button>
