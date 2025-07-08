@@ -1,3 +1,4 @@
+"use client"
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -8,6 +9,7 @@ import {
   MapPin,
   Languages,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -80,107 +82,177 @@ const skills = [
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8 text-center">Tentang Saya</h1>
+      <motion.h1
+        className="text-4xl font-bold mb-8 text-center"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        Tentang Saya
+      </motion.h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-1 space-y-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Informasi Dasar</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-orange-500" />{" "}
-                <span>kwikandreasjonathan@gmail.com</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 text-orange-500" />{" "}
-                <span>Jakarta Pusat, Indonesia</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Languages className="h-5 w-5 text-orange-500" />{" "}
-                <span>Indonesia, Inggris</span>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardTitle>Kemampuan</CardTitle>
-            </CardHeader>
-            <CardContent className="flex flex-wrap gap-2">
-              {skills.map((skill) => (
-                <Badge key={skill} variant="secondary" className="text-sm">
-                  {skill}
-                </Badge>
-              ))}
-            </CardContent>
-          </Card>
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <Card>
+              <CardHeader>
+                <CardTitle>Informasi Dasar</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <Mail className="h-5 w-5 text-orange-500" />{" "}
+                  <span>kwikandreasjonathan@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <MapPin className="h-5 w-5 text-orange-500" />{" "}
+                  <span>Jakarta Pusat, Indonesia</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Languages className="h-5 w-5 text-orange-500" />{" "}
+                  <span>Indonesia, Inggris</span>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          >
+            <Card>
+              <CardHeader>
+                <CardTitle>Kemampuan</CardTitle>
+              </CardHeader>
+              <CardContent className="flex flex-wrap gap-2">
+                {skills.map((skill, i) => (
+                  <motion.div
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.7 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: i * 0.03 }}
+                  >
+                    <Badge variant="secondary" className="text-sm">
+                      {skill}
+                    </Badge>
+                  </motion.div>
+                ))}
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
 
         <div className="lg:col-span-2 space-y-8">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Briefcase className="h-6 w-6 text-orange-500" /> Pengalaman
-                Kerja
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {experiences.map((exp) => (
-                <div key={exp.role}>
-                  <div className="flex justify-between items-baseline">
-                    <h3 className="font-bold">{exp.role}</h3>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">
-                      {exp.period}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Briefcase className="h-6 w-6 text-orange-500" /> Pengalaman
+                  Kerja
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                {experiences.map((exp, i) => (
+                  <motion.div
+                    key={exp.role + exp.company}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.1 }}
+                  >
+                    <div className="flex justify-between items-baseline">
+                      <h3 className="font-bold">{exp.role}</h3>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">
+                        {exp.period}
+                      </p>
+                    </div>
+                    <p className="text-sm font-semibold text-orange-500">
+                      {exp.company}
                     </p>
-                  </div>
-                  <p className="text-sm font-semibold text-orange-500">
-                    {exp.company}
-                  </p>
-                  <p className="mt-1 text-slate-600 dark:text-slate-300">
-                    {exp.desc}
-                  </p>
-                </div>
-              ))}
-            </CardContent>
-          </Card>
+                    <p className="mt-1 text-slate-600 dark:text-slate-300">
+                      {exp.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </CardContent>
+            </Card>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <GraduationCap className="h-6 w-6 text-orange-500" /> Edukasi
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                {educations.map((edu) => (
-                  <div key={edu.school} className="mb-2">
-                    <h3 className="font-bold">{edu.school}</h3>
-                    <p className="text-sm text-orange-500">{edu.degree}</p>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">
-                      {edu.period}
-                    </p>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Award className="h-6 w-6 text-orange-500" /> Sertifikasi
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {certifications.map((cert) => (
-                  <div key={cert.name}>
-                    <h3 className="font-bold">{cert.name}</h3>
-                    <p className="text-sm text-slate-500 dark:text-slate-400">
-                      {cert.issuer} ({cert.year})
-                    </p>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+            >
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <GraduationCap className="h-6 w-6 text-orange-500" />{" "}
+                    Edukasi
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {educations.map((edu, i) => (
+                    <motion.div
+                      key={edu.school + edu.degree}
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: i * 0.07 }}
+                      className="mb-2"
+                    >
+                      <h3 className="font-bold">{edu.school}</h3>
+                      <p className="text-sm text-orange-500">{edu.degree}</p>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">
+                        {edu.period}
+                      </p>
+                    </motion.div>
+                  ))}
+                </CardContent>
+              </Card>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
+            >
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Award className="h-6 w-6 text-orange-500" /> Sertifikasi
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {certifications.map((cert, i) => (
+                    <motion.div
+                      key={cert.name}
+                      initial={{ opacity: 0, x: 30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: i * 0.07 }}
+                    >
+                      <h3 className="font-bold">{cert.name}</h3>
+                      <p className="text-sm text-slate-500 dark:text-slate-400">
+                        {cert.issuer} ({cert.year})
+                      </p>
+                    </motion.div>
+                  ))}
+                </CardContent>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -72,7 +72,7 @@ export default function ProjectsPage() {
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.3 }}
           >
-            <Card className="overflow-hidden hover:shadow-lg hover:shadow-orange-500/10 transition-shadow">
+            <Card className="overflow-hidden hover:shadow-lg hover:shadow-orange-500/20 transition-shadow">
               <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>

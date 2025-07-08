@@ -53,7 +53,7 @@ export function FeaturedProjectsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 transform hover:-translate-y-1">
+              <Card className="h-full flex flex-col overflow-hidden hover:shadow-lg hover:shadow-orange-500/20 transition-all duration-300 transform hover:-translate-y-1">
                 <img src={project.imageUrl} alt={project.title} className="w-full h-48 object-cover" />
                 <CardHeader>
                   <CardTitle>{project.title}</CardTitle>
