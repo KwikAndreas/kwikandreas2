@@ -60,7 +60,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.7 }}
         >
-          <Link href="/proyek">
+          <Link href="/project">
             <Button
               size="lg"
               className="bg-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 text-white shadow-lg shadow-orange-500/10 transition-all duration-200 group
@@ -84,7 +84,7 @@ export function HeroSection() {
               </motion.span>
             </Button>
           </Link>
-          <Link href="/kontak">
+          <Link href="/contact">
             <Button
               size="lg"
               variant="outline"
