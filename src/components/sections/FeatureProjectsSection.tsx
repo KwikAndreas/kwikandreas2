@@ -96,7 +96,7 @@ export function FeaturedProjectsSection() {
             </motion.div>
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center select-none">
           <Link href="/project">
             <Button
               size="lg"

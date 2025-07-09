@@ -23,7 +23,7 @@ export function CtaSection() {
           atau peluang untuk menjadi bagian dari visi Anda. Mari wujudkan
           sesuatu yang hebat bersama.
         </p>
-        <div className="mt-8">
+        <div className="mt-8 select-none">
           <Link href="/contact">
             <Button
               size="lg"

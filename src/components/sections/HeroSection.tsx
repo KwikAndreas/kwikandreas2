@@ -13,7 +13,7 @@ export function HeroSection() {
       <BeamsBackground className="absolute inset-0 z-0 pointer-events-none" />
       <div className="container mx-auto relative z-10 flex flex-col items-center text-center">
         <motion.p
-          className="mb-4 text-lg text-orange-500 font-semibold"
+          className="mb-4 text-lg text-orange-500 font-semibold select-none"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
@@ -23,7 +23,7 @@ export function HeroSection() {
         <motion.h1
           className="text-5xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-br from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_2px_24px_rgba(255,115,0,0.25)] animate-gradient
             dark:drop-shadow-[0_2px_24px_rgba(255,115,0,0.25)]
-            light:drop-shadow-[0_2px_24px_rgba(255,115,0,0.15)]
+            light:drop-shadow-[0_2px_24px_rgba(255,115,0,0.15)] select-none
             "
           style={{
             backgroundSize: "200% 200%",
@@ -37,7 +37,7 @@ export function HeroSection() {
           Kwik Andreas Jonathan
         </motion.h1>
         <motion.h2
-          className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-slate-700 dark:text-slate-300"
+          className="mt-4 text-3xl md:text-5xl font-bold tracking-tight text-slate-700 dark:text-slate-300 select-none"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
@@ -46,7 +46,7 @@ export function HeroSection() {
           &amp; <span className="text-purple-500">Game Developer</span>.
         </motion.h2>
         <motion.p
-          className="mt-6 max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400"
+          className="mt-6 max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400 select-none"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.55 }}
@@ -66,7 +66,7 @@ export function HeroSection() {
               className="bg-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 text-white shadow-lg shadow-orange-500/10 transition-all duration-200 group
                 dark:shadow-orange-500/10
                 light:shadow-orange-400/20
-                hover:brightness-110
+                hover:brightness-110 select-none
                 "
               style={{
                 boxShadow:
@@ -90,7 +90,7 @@ export function HeroSection() {
               variant="outline"
               className="border-orange-200 dark:border-orange-700 hover:border-orange-500 hover:bg-orange-50/60 dark:hover:bg-orange-900/10 transition-all duration-200
                 shadow
-                hover:shadow-orange-200/40
+                hover:shadow-orange-200/40 select-none
                 "
               style={{
                 boxShadow:
