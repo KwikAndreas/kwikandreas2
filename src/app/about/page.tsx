@@ -10,6 +10,7 @@ import {
   Languages,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Footer } from "@/components/layout/Footer";
 
 const experiences = [
   {
@@ -259,6 +260,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

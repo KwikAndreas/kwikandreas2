@@ -17,7 +17,7 @@ const featuredProjects = [
   {
     title: "Car Rush",
     description: "Game balapan mobil yang dibangun dengan Unity.",
-    tags: ["Unity", "C#", "Game Development"],
+    tags: ["Unity", "C#", "Blender"],
     imageUrl: "/images/projects/carrush.webp",
   },
   {
@@ -29,7 +29,7 @@ const featuredProjects = [
   {
     title: "Bobuah",
     description: "Aplikasi untuk pemesanan Teh Boba Buah",
-    tags: ["Flutter", "Dart"],
+    tags: ["Flutter", "Dart", "Firebase"],
     imageUrl: "/images/projects/bobuah.webp",
   },
 ];
@@ -62,7 +62,10 @@ export function FeaturedProjectsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full flex flex-col overflow-hidden border border-orange-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:shadow-xl hover:shadow-orange-400/20 dark:hover:shadow-orange-500/20 transition-all duration-300 transform hover:-translate-y-1">
+              <Card
+                className="h-full flex flex-col overflow-hidden border border-orange-100 dark:border-zinc-800 bg-white dark:bg-zinc-900 hover:shadow-xl 
+              hover:shadow-orange-400/30 dark:hover:shadow-orange-500/20 transition-all duration-300 transform hover:-translate-y-1 group-hover:border-orange-400 group-hover:ring-2 group-hover:ring-orange-200 dark:group-hover:ring-orange-500/30"
+              >
                 <img
                   src={project.imageUrl}
                   alt={project.title}

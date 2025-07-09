@@ -10,7 +10,6 @@ import BeamsBackground from "../kokonutui/beams-background";
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center bg-white dark:bg-transparent">
-      {/* Tambahkan BeamsBackground di bawah konten utama */}
       <BeamsBackground className="absolute inset-0 z-0 pointer-events-none" />
       <div className="container mx-auto relative z-10 flex flex-col items-center text-center">
         <motion.p
@@ -66,7 +65,7 @@ export function HeroSection() {
               size="lg"
               className="bg-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 text-white shadow-lg shadow-orange-500/10 transition-all duration-200 group
                 dark:shadow-orange-500/10
-                shadow-orange-400/20
+                light:shadow-orange-400/20
                 hover:brightness-110
                 "
               style={{
