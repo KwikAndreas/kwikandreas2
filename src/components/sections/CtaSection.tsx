@@ -1,9 +1,9 @@
 // components/sections/CtaSection.tsx
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export function CtaSection() {
   return (
@@ -19,11 +19,20 @@ export function CtaSection() {
           Tertarik untuk Berkolaborasi?
         </h2>
         <p className="mt-4 max-w-2xl mx-auto text-slate-600 dark:text-slate-400">
-          Saya selalu terbuka untuk mendiskusikan proyek baru, ide-ide kreatif, atau peluang untuk menjadi bagian dari visi Anda. Mari wujudkan sesuatu yang hebat bersama.
+          Saya selalu terbuka untuk mendiskusikan proyek baru, ide-ide kreatif,
+          atau peluang untuk menjadi bagian dari visi Anda. Mari wujudkan
+          sesuatu yang hebat bersama.
         </p>
         <div className="mt-8">
           <Link href="/contact">
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+            <Button
+              size="lg"
+              className="bg-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-pink-500 text-white shadow-lg shadow-orange-400/20 transition-all duration-200 group hover:brightness-110"
+              style={{
+                boxShadow:
+                  "0 4px 24px 0 rgba(255, 115, 0, 0.12), 0 1.5px 6px 0 rgba(255, 115, 0, 0.08)",
+              }}
+            >
               Hubungi Saya
             </Button>
           </Link>

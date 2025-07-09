@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -99,7 +99,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <Card>
+            <Card className="bg-white dark:bg-zinc-900 border border-orange-100 dark:border-zinc-800 shadow-md dark:shadow-none">
               <CardHeader>
                 <CardTitle>Informasi Dasar</CardTitle>
               </CardHeader>
@@ -125,20 +125,23 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           >
-            <Card>
+            <Card className="bg-white dark:bg-zinc-900 border border-orange-100 dark:border-zinc-800 shadow-md dark:shadow-none">
               <CardHeader>
                 <CardTitle>Kemampuan</CardTitle>
               </CardHeader>
               <CardContent className="flex flex-wrap gap-2">
                 {skills.map((skill, i) => (
                   <motion.div
-                    key={skill}
+                    key={skill + "-" + i}
                     initial={{ opacity: 0, scale: 0.7 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: i * 0.03 }}
                   >
-                    <Badge variant="secondary" className="text-sm">
+                    <Badge
+                      variant="secondary"
+                      className="text-sm bg-orange-50 text-orange-700 border-orange-200 dark:bg-zinc-800 dark:text-zinc-200 dark:border-zinc-700"
+                    >
                       {skill}
                     </Badge>
                   </motion.div>
@@ -165,7 +168,7 @@ export default function AboutPage() {
               <CardContent className="space-y-6">
                 {experiences.map((exp, i) => (
                   <motion.div
-                    key={exp.role + exp.company}
+                    key={exp.role + exp.company + i}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -206,7 +209,7 @@ export default function AboutPage() {
                 <CardContent>
                   {educations.map((edu, i) => (
                     <motion.div
-                      key={edu.school + edu.degree}
+                      key={edu.school + edu.degree + i}
                       initial={{ opacity: 0, x: -30 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
@@ -238,7 +241,7 @@ export default function AboutPage() {
                 <CardContent className="space-y-4">
                   {certifications.map((cert, i) => (
                     <motion.div
-                      key={cert.name}
+                      key={cert.name + "-" + i}
                       initial={{ opacity: 0, x: 30 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}

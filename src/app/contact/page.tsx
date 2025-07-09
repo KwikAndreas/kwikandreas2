@@ -95,28 +95,39 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-4">
-                {socialLinks.map((social) => {
+                {socialLinks.map((social, i) => {
                   const Icon = social.icon;
                   return (
-                    <a
+                    <motion.a
                       key={social.name}
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
+                      initial={{ opacity: 0, y: 24 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.4,
+                        delay: i * 0.08,
+                        ease: "easeOut",
+                      }}
+                      whileHover={{ scale: 1.04 }}
+                      whileTap={{ scale: 0.98 }}
+                      className="block"
                     >
                       <Button
                         variant="outline"
-                        className="w-full justify-start gap-3"
+                        className="w-full justify-start gap-3 border-slate-200 dark:border-zinc-700 hover:border-orange-400 hover:bg-orange-50/40 dark:hover:bg-orange-900/10 transition-all duration-200 shadow-sm hover:shadow-lg group"
                       >
-                        <Icon className="h-5 w-5" />
-                        <span className="flex-grow text-left">
+                        <Icon className="h-5 w-5 text-orange-500 group-hover:scale-110 transition-transform duration-200" />
+                        <span className="flex-grow text-left font-semibold bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent group-hover:brightness-125 transition-all duration-200">
                           {social.name}
                         </span>
-                        <span className="text-slate-500 dark:text-slate-400">
+                        <span className="text-slate-500 dark:text-slate-400 group-hover:text-orange-500 transition-colors duration-200">
                           {social.user}
                         </span>
                       </Button>
-                    </a>
+                    </motion.a>
                   );
                 })}
               </div>
