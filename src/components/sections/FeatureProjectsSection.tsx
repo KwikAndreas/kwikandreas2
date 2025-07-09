@@ -30,7 +30,7 @@ const featuredProjects = [
     title: "Bobuah",
     description: "Aplikasi untuk pemesanan Teh Boba Buah",
     tags: ["Flutter", "Dart", "Firebase"],
-    imageUrl: "/images/projects/bobuah.webp",
+    imageUrl: "/images/projects/BOBUAH.webp",
   },
 ];
 
