@@ -47,6 +47,11 @@ const certifications = [
     year: "2025",
   },
   {
+    name: "Linux System Administration",
+    issuer: "Btech Academy",
+    year: "2024",
+  },
+  {
     name: "Algorithms & Data Structures with Python (Gold)",
     issuer: " Samsung Inovation Campus",
     year: "2024",
